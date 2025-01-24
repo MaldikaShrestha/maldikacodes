@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        tr:nth-child(odd):not(:first-child){
+            background-color: red;
+        }
+        tr:nth-child(even){
+            background-color: blue;
+        }
+        table{
+            border-color: blueviolet;
+            border:25%;
+        }
+        th{
+            font-style: italic;
+            
+        }
+        canvas{
+            color:aqua;
+            font-size:medium;
+        }
+    
+    </style>
+</head>
+<body>
+    
+    <table border="1">
+        <caption>STUDENT</caption>
+        <tr>
+            <th colspan="2">Fullname</th>
+            <th>Address</th>
+            <th>Class</th>
+            
+        </tr>
+        <tr>
+            <td>Maldika</td>
+            <td>Shrestha</td>
+            <td>Lubhoo</td>
+            <td rowspan="2">10</td>
+        </tr>
+        <tr>
+            <td>Sneha</td>
+            <td>Dhimal</td>
+            <td>Kathmandu</td>
+        </tr>
+    </table>
+    <ol>
+        <li>DAA</li>
+        <li>Cryptograpthy</li>
+        <li>Web Tech</li>
+        <li>Simulation</li>
+        <li>SAD</li>
+        <li>MUltimedia</li>
+    </ol>
+    <ul>
+        <li>DAA</li>
+        <li style="color:aqua">Cryptograpthy</li>
+        <li style="font-size: larger;">Web Tech</li>
+        <li>Simulation</li>
+        <li>SAD</li>
+        <li>MUltimedia</li>
+    </ul>
+    <dl>
+       <dt>DAA</dt>
+       <dt>Crpto</dt>
+       <dap>Web</dap>
+    </dl>
+</body>
+</html>

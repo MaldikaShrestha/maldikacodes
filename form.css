@@ -1,0 +1,25 @@
+form{
+    margin: 25px;
+    background-color: rgb(209, 241, 230);
+    width:40%;
+}
+form h1{
+    font-style: italic,bold;
+    text-align: center;
+}
+form label{
+    display: block;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    font-style: normal;
+    font-weight:bold;
+    color:black;
+}
+form input{
+    width: 45%;
+    padding: 10px;
+    border: 1px solid rgb(26, 24, 24);
+    margin-left: 5px;
+    margin-bottom: 5px;
+
+}
