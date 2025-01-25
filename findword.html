@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finding the words</title>
+</head>
+<style>
+    .highlight{
+        background-color: yellow;
+    }
+    h1{
+        font-size: 15px;
+    }
+    #box{
+        height: 80px;
+        width: 250px;
+        border: solid;
+        border-width: 1px;
+        padding: 3px;
+    }
+</style>
+<body>
+    <div id="box">
+    <h1>Enter the word you want to search.</h1>
+    <form>
+        <input type="text" name="word" id="word"/>
+        <input type="button" value="search" onclick="findword()"/>
+    </form>
+    </div>
+    <h2>Sample Paragraph</h2>
+    <p id="sample">
+        Web technology refers to the means by which computers communicate with each other using markup
+        languages and multimedia packages. It gives us a way to interact with hosted information, like
+        websites.  Web technology involves the use of hypertext markup language (HTML) and cascading 
+        style sheets (CSS).Web technology plays a crucial role in shaping how people interact with 
+        internet today. From designing user-friendly websites to developing interactive web applications,
+        web technology makes online communication and information sharing possible. It uses tools like 
+        HTML, CSS, and JavaScript, which are the foundational elements of building a modern web page.
+        Additionally, the advancement of web technologies such as AJAX, WebSockets, and RESTful APIs
+        has allowed for more dynamic, real-time experiences for users.
+    </p>
+</body>
+<script type="text/javascript">
+    function findword(){
+        var enteredWord=document.getElementById("word").value;
+        var para=document.getElementById("sample").innerHTML;
+        var regEx=new RegExp("\\b"+ enteredWord +"\\b","gi");
+
+        if(regEx.test(para)){
+            var highlightText=para.replace(regEx,function(match){
+                return '<span class="highlight">' + match +'</span>';
+            });
+            document.getElementById("sample").innerHTML=highlightText;
+            alert("The entered message is found.");
+        }
+        else{
+            alert("The entered word is not found.")
+        }
+
+    }
+</script>
+</html>
