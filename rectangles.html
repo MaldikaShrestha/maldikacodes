@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color shifting in two rectangles</title>
+</head>
+<style>
+    #box1{
+        height: 100px;
+        width:100px;
+        background-color: green;
+        border: solid;
+        display:inline-block;
+        cursor: pointer;
+    }
+    #box2{
+        height:100px;
+        width:100px;
+        border: solid;
+        display: inline-block;
+        cursor:pointer;
+    }
+</style>
+<script>
+    function shiftColour(clickedbox) {
+        var box1=document.getElementById("box1");
+        var box2=document.getElementById("box2");
+        var colour1=window.getComputedStyle(box1).backgroundColor;
+        var colour2=window.getComputedStyle(box2).backgroundColor;
+
+        if (clickedbox===box1) {
+        box1.style.backgroundColor=colour2;
+        box2.style.backgroundColor=colour1;
+        }
+        else
+        {
+        box2.style.backgroundColor=colour1;
+        box1.style.backgroundColor=colour2;
+
+        }
+    }
+
+</script>
+<body>
+    <div id="box1" onclick="shiftColour(box1)"></div>
+    <div id="box2" onclick="shiftColour(box2)"></div>
+    
+
+</body>
+</html>
