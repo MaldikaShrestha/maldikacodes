@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>JQuery Basics</title>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+           $("#hide").click(function(){
+                $("#box").hide();
+           });
+           $("#show").click(function(){
+                $("#box").show();
+           });
+        });
+    </script>
+    <style>
+        #box {
+            height: 300px;
+            width: 300px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <button id="show">Show</button>
+    <button id="hide">Hide</button>
+</body>
+</html>
